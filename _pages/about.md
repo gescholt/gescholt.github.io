@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a postdoc at <a href='https://www.sorbonne-universite.fr/en'>Sorbonne Université</a>, as a member of the <a href='https://www-polsys.lip6.fr/'>Polsys</a> team.
+I am currently a postdoc in the <a href='https://www-polsys.lip6.fr/'>Polsys</a> team at <a href='https://www.sorbonne-universite.fr/en'>Sorbonne Université</a>.
 I completed my PhD in 2021 under the supervision of <a href='https://sites.math.washington.edu/~vinzant/'>Cynthia Vinzant</a>. 
 My email address is [{{ site.email }}](mailto:{{ site.email }}).
 
