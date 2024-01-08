@@ -9,18 +9,19 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: North Carolina State University
+    - title: PhD in Mathematics
+      institution: North Carolina State University, Raleigh, NC
       year: 2021
       description:
-        # - Description 1.
+        - "Thesis title: <i>Combinatorial and Real Algebraic Structures in Statistics and Optimization.</i>"
+        - "Advisor: Dr. Cynthia Vinzant"
         # - Description 2.
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
         #     - Sub-description 2.
-    - title: Bachelors Mathematics
-      institution: North Carolina State University
+    - title: Bachelor's degree in Mathematics
+      institution: North Carolina State University, Raleigh, NC
       year: 2016
       description:
         # - Description 1.
@@ -30,9 +31,9 @@
   type: time_table
   contents:
     - title: Postdoctoral Researcher
-      institution: Sorbonne University
-      year: 2022
-      description: 
+      institution: Sorbonne University, Laboratoire Jacques-Louis Lions and LIP6
+      year: 2021 - Present
+      description: Nonconvex optimization, approximation theory, real algebraic geometry, and statistics.
 
 
 # - title: Honors and Awards

@@ -19,12 +19,12 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a postdoc, jointly in the <a href='https://www-polsys.lip6.fr/'>Polsys</a> team and the <a href='https://www.ljll.math.upmc.fr/'>Laboratoire Jacques-Louis Lions</a> at <a href='https://www.sorbonne-universite.fr/en'>Sorbonne Université</a> .
-I completed my PhD in 2021 under the supervision of <a href='https://sites.math.washington.edu/~vinzant/'>Cynthia Vinzant</a>. 
+I am currently a postdoc at <a href='https://www.sorbonne-universite.fr/en'>Sorbonne Université</a>, jointly in the <a href='https://www-polsys.lip6.fr/'>Polsys</a> team and at the <a href='https://www.ljll.math.upmc.fr/'>Laboratoire Jacques-Louis Lions</a>.
+I completed my PhD in Mathematics under the supervision of <a href='https://sites.math.washington.edu/~vinzant/'>Dr. Cynthia Vinzant</a> in May 2021. 
 
-My research interests are at the intersection of symbolic and numerical computations.
+My primary work involves studying mathematical structures that emerge within areas of the sciences and engineering.
+A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings. 
+ 
 
 
-<!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
