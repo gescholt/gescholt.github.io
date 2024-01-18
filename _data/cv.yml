@@ -3,6 +3,8 @@
   contents:
     - name: Full Name
       value: Georgy Scholten
+    - name: Computer Languages
+      value: Python, Julia, Maple, R
     - name: Languages
       value: English, French, Russian
 
