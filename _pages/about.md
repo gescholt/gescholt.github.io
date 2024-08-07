@@ -19,12 +19,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a postdoc at <a href='https://www.sorbonne-universite.fr/en'>Sorbonne Université</a>, jointly in the <a href='https://www-polsys.lip6.fr/'>Polsys</a> team and at the <a href='https://www.ljll.math.upmc.fr/'>Laboratoire Jacques-Louis Lions</a>.
-I completed my PhD in Mathematics under the supervision of <a href='https://sites.math.washington.edu/~vinzant/'>Dr. Cynthia Vinzant</a> in May 2021. 
+I am currently a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www-polsys.lip6.fr/) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.math.upmc.fr/).
+I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant](https://sites.math.washington.edu/~vinzant/) in May 2021.
 
 My primary work involves studying mathematical structures that emerge within areas of the sciences and engineering.
-A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings. 
- 
+A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings.
 
 
 
