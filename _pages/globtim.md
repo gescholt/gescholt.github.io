@@ -25,7 +25,6 @@ Our method is carried out in 3 main steps:
 2. A polynomial approximant is constructed via a discrete least squares
 3. The polynomial system of Partial derivatives is solved by either homotopy continuation (numerical  method) or through exact polynomial system solving (symbolic method)
 
-
 ## Example
 
 Here we consider the Trefethen function from the Problem 4 of the \[100 Digit challenge\](<https://en.wikipedia.org/wiki/Hundred-dollar,_Hundred-digit_Challenge_problems>). 
@@ -37,6 +36,5 @@ f(x, y) = \\exp(\\sin(50  x\[1\])) + \\sin(60  \\exp(x\[2\])) + \\sin(70 \\sin(x
 $$
 
 This function has about $2720$ critical pointsin $\[-1, 1\]^2$, which is slightly too much for us, at least for the moment, hence we subdivide the domain.  
-
 
 <iframe src="/assets/plotly/trefethen_function_plot.html" width="100%" height="800px" frameborder="0"></iframe>
