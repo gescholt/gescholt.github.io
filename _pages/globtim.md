@@ -8,6 +8,7 @@ nav: true
 nav_order: 5
 ---
 
+
 Globtim is a Julia package for solving global optimization problems via polynomial approximations.
 
 For this method to work, we only require access to evaluations of the objective function $f$.  
