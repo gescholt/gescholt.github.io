@@ -1,15 +1,11 @@
 
 ---
-
 layout: page
-
 permalink: /globtim/
 title: Globtim
 date: 2024-08-07
 nav: true
 nav_order: 5
-
-
 ---
 
 Globtim is a Julia package for solving global optimization problems via polynomial approximations.
