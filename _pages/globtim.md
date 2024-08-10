@@ -8,6 +8,7 @@ nav: true
 nav_order: 5
 ---
 
+
 Globtim is a Julia package for solving global optimization problems via polynomial approximations.
 
 For this method to work, we only require access to evaluations of the objective function $f$.  
@@ -26,9 +27,7 @@ Our method is carried out in 3 main steps:
 Here we consider the Trefethen function from the Problem 4 of the \[100 Digit challenge\](<https://en.wikipedia.org/wiki/Hundred-dollar,_Hundred-digit_Challenge_problems>). 
 
 $$
-
-f(x, y) = \\exp(\\sin(50  x\[1\])) + \\sin(60  \\exp(x\[2\])) + \\sin(70 \\sin(x\[1\])) + \\sin(\\sin(80 x\[2\])) - \\sin(10 (x\[1\] + x\[2\])) + (x\[1\]^2 + x\[2\]^2) / 4
-
+f(x, y) = \exp(\sin(50  x)) + \sin(60  \exp(y)) + \sin(70 \sin(x)) + \sin(\sin(80 y)) - \sin(10 (x + y)) + (x^2 + y^2) / 4
 $$
 
 This function has about $2720$ critical pointsin $\[-1, 1\]^2$, which is slightly too much for us, at least for the moment, hence we subdivide the domain.  
