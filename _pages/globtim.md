@@ -23,7 +23,7 @@ Our method is carried out in three main steps:
 
 Here we consider the Trefethen function from the Problem 4 of the [100 Digit challenge](https://en.wikipedia.org/wiki/Hundred-dollar,_Hundred-digit_Challenge_problems).
 
-$$ f(x, y) = \exp(\sin(50  x)) + \sin(60  \exp(y)) + \sin(70 \sin(x)) + \sin(\sin(80 y)) - \sin(10 (x + y)) + (x^2 + y^2) / 4 $$
+$$ f(x, y) = \exp(\sin(50 x)) + \sin(60 \exp(y)) + \sin(70 \sin(x)) + \sin(\sin(80 y)) - \sin(10 (x + y)) + (x^2 + y^2) / 4 $$
 
 This function has about $2720$ critical points in $\[-1, 1\]^2$, which is slightly too much for us, at least for the moment, hence we subdivide the domain.
 
@@ -33,30 +33,30 @@ Here is the output of the critical points we are able to compute on the domain $
 
 ## Run Through Six-hump Camel Function
 
-We show the step by step process of running out method to compute all local minima of the Camel function, 
+We show the step by step process of running out method to compute all local minima of the Camel function,
 
-$$ f(x, y)= (4-2.1*x[1]^2 + \frac{x[1]^4}{3})*x[1]^2 + x[1]*x[2] + (-4 + 4*x[2]^2)*x[2]^2, $$
+$$ f(x_1, x_2)= (4-2.1 x_1^2 + \frac{x_1^4}{3})x_1^2 + x_1x_2 + (-4 + 4x_2^2)x_2^2, $$
 
 which is defined over the square $$[-5,5]^2$$.
 
-We recommend running the notebook example in `Examples/camel_2d.ipynb` as a first example to get familiar with the package. 
+We recommend running the notebook example in `Examples/camel_2d.ipynb` as a first example to get familiar with the package.
 
-```julia 
+```julia
 using Globtim
 
-# Domain 
-const n, a, b = 2, 5, 1 
+# Domain
+const n, a, b = 2, 5, 1
 const scale_factor = a / b
 
 # Sampling parameters
-const delta, alpha = .9 , 8 / 10  
+const delta, alpha = .9 , 8 / 10
 
 # Define the tolerance for the L2-norm
-d = 6 # Initial Degree 
-const tol_l2 = 3e-4             
+d = 6 # Initial Degree
+const tol_l2 = 3e-4
 
 # Set the objective function
-f = camel 
+f = camel
 ```
 
 We construct the discrete least squares polynomial (DLSP) approximant. We iterate increasing the decree of the approximant until the discrete $L^2$-norm is smaller than the threshold `tol_l2`.
@@ -75,11 +75,12 @@ while true # Potential infinite loop
 end
 ```
 
-Once we have the coefficients of the polynomial approximant, we construct the polynomial system of partial derivatives using the `DynamicalPolynomials` environment, then we solve it using `HomotopyContinuation` in this first examples. Alternatively, one could use symbolic methods. 
+Once we have the coefficients of the polynomial approximant, we construct the polynomial system of partial derivatives using the `DynamicalPolynomials` environment, then we solve it using `HomotopyContinuation` in this first examples. Alternatively, one could use symbolic methods.
+
 ```julia
 using DynamicPolynomials, HomotopyContinuation, ProgressLogging, DataFrames
-@polyvar(x[1:n])  
-ap = main_nd(n, d, poly_approx.coeffs) 
+@polyvar(x[1:n])
+ap = main_nd(n, d, poly_approx.coeffs)
 PolynomialApproximant = sum(Float64.(ap) .* MonomialVector(x, 0:d)) # Convert coefficients to Float64 for homotopy continuation
 grad = differentiate.(PolynomialApproximant, x)
 sys = System(grad)
@@ -87,16 +88,17 @@ Real_sol_lstsq = HomotopyContinuation.solve(sys)
 real_pts = HomotopyContinuation.real_solutions(Real_sol_lstsq; only_real=true, multiple_results=false)
 ```
 
-Then we sort the critical points we found and retain only the ones that fall into the domain of definition and collect them into a dataframe structure. 
+Then we sort the critical points we found and retain only the ones that fall into the domain of definition and collect them into a dataframe structure.
 
 ```julia
 condition(point) = -1 < point[1] < 1 && -1 < point[2] < 1
-filtered_points = filter(condition, real_pts) 
-h_x = Float64[point[1] for point in filtered_points] 
-h_y = Float64[point[2] for point in filtered_points] 
+filtered_points = filter(condition, real_pts)
+h_x = Float64[point[1] for point in filtered_points]
+h_y = Float64[point[2] for point in filtered_points]
 h_z = map(p -> f([p[1], p[2]]), zip(scale_factor * h_x, scale_factor * h_y))
-df = DataFrame(x=scale_factor * h_x, y=scale_factor * h_y, z= h_z) 
+df = DataFrame(x=scale_factor * h_x, y=scale_factor * h_y, z= h_z)
 ```
+
 We obtain the following 15 critical points plotted in orange, 6 of them are local minima of `f`.
 
 <div style="text-align: center;">
