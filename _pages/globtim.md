@@ -15,8 +15,8 @@ We call this method global because we seek to compute all local minima of the ob
 
 Our method is carried out in three main steps:
 
-1. The input function `f` is sampled on a tensorized Chebyshev grid
-2. A polynomial approximant is constructed via a discrete least squares
+1. The input function `f` is sampled on a tensorized Chebyshev grid.
+2. A polynomial approximant is constructed via a discrete least squares.
 3. The polynomial system of Partial derivatives is solved with either a homotopy continuation method (numerical) or through an exact polynomial system solving (symbolic) method.
 
 ## Example
