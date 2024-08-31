@@ -11,7 +11,7 @@ nav_order: 5
 
 For this method to work, we only require access to evaluations of the objective function `f`.
 
-We call this method global because we seek to compute all local minima of the objective function `f`, a real continuous function defined over some given rectangular domain in $$\mathbb{R}^n$$.
+We call this method global because we seek to compute all local minimizers of the objective function `f`, a real continuous function defined over some given rectangular domain in $$\mathbb{R}^n$$.
 
 Our method is carried out in three main steps:
 
@@ -33,7 +33,7 @@ Here is the output of the critical points we are able to compute on the domain $
 
 ## Run Through Six-hump Camel Function
 
-We show the step by step process of running out method to compute all local minima of the Camel function,
+We show the step by step process of running out method to compute all local minimizers of the Camel function,
 
 $$ f(x_1, x_2)= (4-2.1 x_1^2 + \frac{x_1^4}{3})x_1^2 + x_1x_2 + (-4 + 4x_2^2)x_2^2, $$
 
@@ -99,7 +99,7 @@ h_z = map(p -> f([p[1], p[2]]), zip(scale_factor * h_x, scale_factor * h_y))
 df = DataFrame(x=scale_factor * h_x, y=scale_factor * h_y, z= h_z)
 ```
 
-We obtain the following 15 critical points plotted in orange, 6 of them are local minima of `f`.
+We obtain the following 15 critical points plotted in orange, 6 of them are local minimizers of `f`.
 
 <div style="text-align: center;">
   <img src="../assets/img/camel_6humps.png" alt="Six-hump Camel Function" width="500">
