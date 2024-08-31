@@ -59,7 +59,7 @@ const tol_l2 = 3e-4
 f = camel
 ```
 
-We construct the discrete least squares polynomial (DLSP) approximant. We iterate increasing the decree of the approximant until the discrete $L^2$-norm is smaller than the threshold `tol_l2`.
+We construct the discrete least squares polynomial (DLSP) approximant. We iterate increasing the decree of the approximant until the discrete $$ L^2 $$-norm is smaller than the threshold `tol_l2`.
 
 ```julia
 while true # Potential infinite loop
