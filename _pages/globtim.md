@@ -104,3 +104,47 @@ We obtain the following 15 critical points plotted in orange, 6 of them are loca
 <div style="text-align: center;">
   <img src="../assets/img/camel_6humps.png" alt="Six-hump Camel Function" width="500">
 </div>
+
+<br><br><br>
+
+## What If There Is Noise ?
+
+Let us assume a Gaussian noise affects the evaluation of the following `CrossInTray` function: 
+$$
+    f(x, y) =  \frac{-1}{1000} \left( \left\vert \sin(x) \sin(y) \exp \left( \left\vert 100 - \frac{\sqrt{x^2 + y^2}}{\pi} \right\vert \right) \right\vert + 1 \right)^{\frac{1}{10}}. 
+$$
+
+We define the noisy version of the `CrossInTray` objective function
+```julia
+using Distributions
+
+function noisy_CrossInTray(xx::Vector{Float64}; mean::Float64=0.0, stddev::Float64=1.0)::Float64
+    noise = rand(Normal(mean, stddev))
+    return CrossInTray(xx) + noise
+end
+```
+We reset the starting degree and slightly relax the tolerance in the $L^2$-norm, which is not necessary in the current example. 
+```julia
+d = 4
+noisy_tol_l2 = 4e-2            
+```
+We run the sae loop to construct an accurate approximant, the last input of `MainGenerate`, which is set to `0.5`, is a relaxing factor on the number of samples we consider in the construction. 
+Setting it to `1` makes the computations of the polynomial approx `poly_approx` consider more samples.
+This can make the calculations slower on more difficult examples, in exchange, we can attain the desired probabilistic guarantees on the accuracy of the approximant. 
+
+```julia
+while true # Potential infinite loop
+    global poly_approx_noisy = MainGenerate(f, 2, d, delta, alpha, scale_factor, 0.5) 
+    if poly_approx_noisy.nrm < noisy_tol_l2
+        println("attained the desired L2-norm: ", poly_approx_noisy.nrm)
+        break
+    else
+        println("current L2-norm: ", poly_approx_noisy.nrm)
+        println("Number of samples: ", poly_approx_noisy.N)
+        global d += 1
+    end
+end
+```
+In red, we observe the critical points of the approximant in the noiseless case. In orange, we display the critical points of the approximant of the current example, constructed on the (noisy) blue cloud of points.  
+
+<iframe src="/assets/plotly/Noisy_CrossInTray.html" width="100%" height="800px" frameborder="0"></iframe>

@@ -17,17 +17,9 @@
       description:
         - "Thesis title: <i>Combinatorial and Real Algebraic Structures in Statistics and Optimization.</i>"
         - "Advisor: Dr. Cynthia Vinzant"
-        # - Description 2.
-        # - title: Description 3.
-        #   contents:
-        #     - Sub-description 1.
-        #     - Sub-description 2.
     - title: Bachelor's degree in Mathematics
       institution: North Carolina State University, Raleigh, NC
       year: 2016
-      description:
-        # - Description 1.
-        # - Description 2.
 
 - title: Experience
   type: time_table
