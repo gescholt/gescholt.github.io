@@ -127,11 +127,11 @@ end
 ```
 
 First, we re-iterate the procedure described above, we capture all local minima at degree $d=11$, with tolerance set to `tol_l2=3e-2`.
-We notice that we also find some critical points along the spikes of the function (the red cross of points at the level `z=0`). Those spikes are present in the function, but hard to detect by sampling points, one can see them as a set of measure $ 0 $ in $ [-10, 10]^2 $. Because of the symmetry of the function and of our sampling scheme, the approximant admits critical points exactly along these ridges and detects the spikes of the `CrossInTray` function.
+We notice that we also find some critical points along the spikes of the function (the red cross of points at the level `z=0`). Those spikes are present in the function, but hard to detect by sampling points, one can see them as a set of measure $$ 0 $$ in $$ [-10, 10]^2 $$. Because of the symmetry of the function and of our sampling scheme, the approximant admits critical points exactly along these ridges and detects the spikes of the `CrossInTray` function.
 
 <iframe src="/assets/plotly/CrossInTray_surf_exact.html" width="100%" height="800px" frameborder="0"></iframe>
 
-We reset the starting degree and slightly relax the tolerance in the $L^2$-norm, which is not necessary in the current example.
+We reset the starting degree and slightly relax the tolerance in the $$ L^2 $$-norm, which is not necessary in the current example.
 
 ```julia
 d = 4
