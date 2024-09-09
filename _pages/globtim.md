@@ -126,6 +126,11 @@ function noisy_CrossInTray(xx::Vector{Float64}; mean::Float64=0.0, stddev::Float
 end
 ```
 
+First, we re-iterate the procedure described above, we capture all local minima at degree $d=11$, with tolerance set to `tol_l2=3e-2`.
+We notice that we also find some critical points along the spikes of the function (the red cross of points at the level `z=0`). Those spikes are present in the function, but hard to detect by sampling points, one can see them as a set of measure $ 0 $ in $ [-10, 10]^2 $. Because of the symmetry of the function and of our sampling scheme, the approximant admits critical points exactly along these ridges and detects the spikes of the `CrossInTray` function.
+
+<iframe src="/assets/plotly/CrossInTray_surf_exact.html" width="100%" height="800px" frameborder="0"></iframe>
+
 We reset the starting degree and slightly relax the tolerance in the $L^2$-norm, which is not necessary in the current example.
 
 ```julia
@@ -153,4 +158,8 @@ end
 
 In red, we observe the critical points of the approximant in the noiseless case. In orange, we display the critical points of the approximant of the current example, constructed on the (noisy) blue cloud of points.
 
-<iframe src="/assets/plotly/Noisy_CrossInTray.html" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="/assets/plotly/Noisy_CrossInTray.html" width="100%" height="800px" frameborder="0"></iframe> <div style="text-align: center; margin-top: 10px;"> <strong>Legend:</strong> <span style="color: red;">Red - Noiseless Critical Points</span>, <span style="color: orange;">Orange - Noisy Critical Points</span>, <span style="color: blue;">Blue - Noisy Data Points</span> </div>
+
+We display the critical points computed on the noisy data set over the exact surface
+
+<iframe src="/assets/plotly/CrossInTray_surf_noisy_pts.html" width="100%" height="800px" frameborder="0"></iframe>
