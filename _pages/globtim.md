@@ -156,7 +156,7 @@ while true # Potential infinite loop
 end
 ```
 
-In red, we observe the critical points of the approximant in the noiseless case. In orange, we display the critical points of the approximant of the current example, constructed on the (noisy) blue cloud of points.
+In red, we observe the critical points of the approximant in the noiseless case. In orange, we display the critical points of the approximant of the current example, constructed on the (noisy) blue cloud of points. **By clicking on the labels in the plot below, turn on/off the display of that point-set in the plot.**
 
 <iframe src="/assets/plotly/Noisy_CrossInTray.html" width="100%" height="800px" frameborder="0"></iframe> <div style="text-align: center; margin-top: 10px;"> <strong>Legend:</strong> <span style="color: red;">Red - Noiseless Critical Points</span>, <span style="color: orange;">Orange - Noisy Critical Points</span>, <span style="color: blue;">Blue - Noisy Data Points</span> </div>
 
