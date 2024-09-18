@@ -1,0 +1,139 @@
+---
+layout: post
+permalink: /globtim/camel_function/
+title: Camel Function
+date: 2024-09-18
+---
+
+## Run Through Six-hump Camel Function
+
+We show the step by step process of running out method to compute all local minimizers of the Camel function,
+
+$$ f(x_1, x_2)= (4-2.1 x_1^2 + \frac{x_1^4}{3})x_1^2 + x_1x_2 + (-4 + 4x_2^2)x_2^2, $$
+
+which is defined over the square $$ [-5,5]^2 $$.
+
+We recommend running the notebook example in `Examples/camel_2d.ipynb` as a first example to get familiar with the package.
+
+```julia
+using Globtim
+
+# Domain
+const n, a, b = 2, 5, 1
+const scale_factor = a / b
+
+# Sampling parameters
+const delta, alpha = .9 , 8 / 10
+
+# Define the tolerance for the L2-norm
+d = 6 # Initial Degree
+const tol_l2 = 3e-4
+
+# Set the objective function
+f = camel
+```
+
+We construct the discrete least squares polynomial (DLSP) approximant. We iterate increasing the decree of the approximant until the discrete $$ L^2 $$-norm is smaller than the threshold `tol_l2`.
+
+```julia
+while true # Potential infinite loop
+    global poly_approx = MainGenerate(f, 2, d, delta, alpha, scale_factor, 0.2) # computes the approximant in Chebyshev basis
+    if poly_approx.nrm < tol_l2
+        println("attained the desired L2-norm: ", poly_approx.nrm)
+        break
+    else
+        println("current L2-norm: ", poly_approx.nrm)
+        println("Number of samples: ", poly_approx.N)
+        global d += 1
+    end
+end
+```
+
+Once we have the coefficients of the polynomial approximant, we construct the polynomial system of partial derivatives using the `DynamicalPolynomials` environment, then we solve it using `HomotopyContinuation` in this first examples. Alternatively, one could use symbolic methods.
+
+```julia
+using DynamicPolynomials, HomotopyContinuation, ProgressLogging, DataFrames
+@polyvar(x[1:n])
+ap = main_nd(n, d, poly_approx.coeffs)
+PolynomialApproximant = sum(Float64.(ap) .* MonomialVector(x, 0:d)) # Convert coefficients to Float64 for homotopy continuation
+grad = differentiate.(PolynomialApproximant, x)
+sys = System(grad)
+Real_sol_lstsq = HomotopyContinuation.solve(sys)
+real_pts = HomotopyContinuation.real_solutions(Real_sol_lstsq; only_real=true, multiple_results=false)
+```
+
+Then we sort the critical points we found and retain only the ones that fall into the domain of definition and collect them into a dataframe structure.
+
+```julia
+condition(point) = -1 < point[1] < 1 && -1 < point[2] < 1
+filtered_points = filter(condition, real_pts)
+h_x = Float64[point[1] for point in filtered_points]
+h_y = Float64[point[2] for point in filtered_points]
+h_z = map(p -> f([p[1], p[2]]), zip(scale_factor * h_x, scale_factor * h_y))
+df = DataFrame(x=scale_factor * h_x, y=scale_factor * h_y, z= h_z)
+```
+
+We obtain the following 15 critical points plotted in orange, 6 of them are local minimizers of `f`.
+
+<div style="text-align: center;">
+  <img src="../assets/img/camel_6humps.png" alt="Six-hump Camel Function" width="500">
+</div>
+
+<br><br><br>
+
+## What If There Is Noise ?
+
+Let us assume a Gaussian noise affects the evaluation of the following `CrossInTray` function:
+
+$$
+    f(x, y) =  \frac{-1}{1000} \left( \left\vert \sin(x) \sin(y) \exp \left( \left\vert 100 - \frac{\sqrt{x^2 + y^2}}{\pi} \right\vert \right) \right\vert + 1 \right)^{\frac{1}{10}}.
+$$
+
+We define the noisy version of the `CrossInTray` objective function
+
+```julia
+using Distributions
+
+function noisy_CrossInTray(xx::Vector{Float64}; mean::Float64=0.0, stddev::Float64=1.0)::Float64
+    noise = rand(Normal(mean, stddev))
+    return CrossInTray(xx) + noise
+end
+```
+
+First, we re-iterate the procedure described above, we capture all local minima at degree $d=11$, with tolerance set to `tol_l2=3e-2`.
+We notice that we also find some critical points along the spikes of the function (the red cross of points at the level `z=0`). Those spikes are present in the function, but hard to detect by sampling points, one can see them as a set of measure $$ 0 $$ in $$ [-10, 10]^2 $$. Because of the symmetry of the function and of our sampling scheme, the approximant admits critical points exactly along these ridges and detects the spikes of the `CrossInTray` function.
+
+<iframe src="/assets/plotly/CrossInTray/CrossInTray_surf_exact.html" width="100%" height="800px" frameborder="0"></iframe>
+
+We reset the starting degree and slightly relax the tolerance in the $$ L^2 $$-norm, which is not necessary in the current example.
+
+```julia
+d = 4
+noisy_tol_l2 = 4e-2
+```
+
+We run the sae loop to construct an accurate approximant, the last input of `MainGenerate`, which is set to `0.5`, is a relaxing factor on the number of samples we consider in the construction.
+Setting it to `1` makes the computations of the polynomial approx `poly_approx` consider more samples.
+This can make the calculations slower on more difficult examples, in exchange, we can attain the desired probabilistic guarantees on the accuracy of the approximant.
+
+```julia
+while true # Potential infinite loop
+    global poly_approx_noisy = MainGenerate(f, 2, d, delta, alpha, scale_factor, 0.5)
+    if poly_approx_noisy.nrm < noisy_tol_l2
+        println("attained the desired L2-norm: ", poly_approx_noisy.nrm)
+        break
+    else
+        println("current L2-norm: ", poly_approx_noisy.nrm)
+        println("Number of samples: ", poly_approx_noisy.N)
+        global d += 1
+    end
+end
+```
+
+In red, we observe the critical points of the approximant in the noiseless case. In orange, we display the critical points of the approximant of the current example, constructed on the (noisy) blue cloud of points. **By clicking on the labels in the plot below, turn on/off the display of that point-set in the plot.**
+
+<iframe src="/assets/plotly/CrossInTray/Noisy_CrossInTray.html" width="100%" height="800px" frameborder="0"></iframe> <div style="text-align: center; margin-top: 10px;"> <strong>Legend:</strong> <span style="color: red;">Red - Noiseless Critical Points</span>, <span style="color: orange;">Orange - Noisy Critical Points</span>, <span style="color: blue;">Blue - Noisy Data Points</span> </div>
+
+We display the critical points computed on the noisy data set over the exact surface
+
+<iframe src="/assets/plotly/CrossInTray/CrossInTray_surf_noisy_pts.html" width="100%" height="800px" frameborder="0"></iframe>

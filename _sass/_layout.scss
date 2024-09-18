@@ -40,6 +40,15 @@ body.sticky-bottom-footer {
 
 // TODO: redefine content layout.
 
+.post {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+  /* Optional: Add some padding for better readability */
+  margin: 0 auto;
+  /* Center the content */
+}
+
 /******************************************************************************
  * Publications
  ******************************************************************************/

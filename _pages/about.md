@@ -2,6 +2,7 @@
 layout: about
 title: Georgy Scholten
 permalink: /
+nav: false
 subtitle: <a href='https://www.csbdresden.de/'> Center for Systems Biology Dresden</a>
 
 profile:
@@ -18,8 +19,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am currently a postdoc at [MPI-CBG](https://www.mpi-cbg.de/), working in the [Algebraic Systems Biology](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/research-focus).
-Previously, I was a postdoc at the [Polsys Team](https://www-polsys.lip6.fr/) and [Laboratoire Jacques-Louis Lions](https://www.ljll.fr/en/).
+I am currently a postdoc at [MPI-CBG](https://www.mpi-cbg.de/), working in the [Algebraic Systems Biology group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/research-focus).
+Previously, I was a postdoc at [Sorbonne Universite](https://www.sorbonne-universite.fr/), jointly in the [Polsys Team](https://www-polsys.lip6.fr/) and the [Laboratoire Jacques-Louis Lions](https://www.ljll.fr/en/).
 I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant](https://sites.math.washington.edu/~vinzant/) in May 2021.
 
 My primary work involves studying mathematical structures that emerge within areas of the sciences and engineering.

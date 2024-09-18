@@ -2,14 +2,19 @@
 layout: post
 permalink: /globtim/
 title: Globtim
-date: 2024-08-07
+date: 2024-09-18
 nav: true
-nav_order: 5
+nav_order: 4
 ---
 
-[Globtim](https://gitlab.lip6.fr/ghscholt/globtim) is a Julia package for solving global optimization problems via polynomial approximations.
+[Globtim](https://github.com/gescholt/Globtim.jl) is a Julia package for solving global optimization problems via polynomial approximations.
+It can be installed from the Julia REPL, simply by running the command
 
-For this method to work, we only require access to evaluations of the objective function `f`.
+```julia
+add Globtim
+```
+
+This global optimization method only requires access to evaluations of the objective function `f`.
 
 We call this method global because we seek to compute all local minimizers of the objective function `f`, a real continuous function defined over some given rectangular domain in $$\mathbb{R}^n$$.
 
@@ -19,147 +24,45 @@ Our method is carried out in three main steps:
 2. A polynomial approximant is constructed via a discrete least squares.
 3. The polynomial system of Partial derivatives is solved with either a homotopy continuation method (numerical) or through an exact polynomial system solving (symbolic) method.
 
+A comprehensive documentation for the package is actively worked on, for the time being, the following examples illustrate how the package can be used.
+
 ## Example
 
-Here we consider the Trefethen function from the Problem 4 of the [100 Digit challenge](https://en.wikipedia.org/wiki/Hundred-dollar,_Hundred-digit_Challenge_problems).
-
-$$ f(x, y) = \exp(\sin(50 x)) + \sin(60 \exp(y)) + \sin(70 \sin(x)) + \sin(\sin(80 y)) - \sin(10 (x + y)) + (x^2 + y^2) / 4 $$
-
-This function has about $$2720$$ critical points in $$ [-1, 1]^2 $$, which is slightly too much for us, at least for the moment, hence we subdivide the domain.
-
-<iframe src="/assets/plotly/trefethen_function_plot.html" width="100%" height="800px" frameborder="0"></iframe>
-
-Here is the output of the critical points we are able to compute on the domain $$ [-.2, .2]^2 $$ with a polynomial approximant of degree 25.
-
-## Run Through Six-hump Camel Function
-
-We show the step by step process of running out method to compute all local minimizers of the Camel function,
-
-$$ f(x_1, x_2)= (4-2.1 x_1^2 + \frac{x_1^4}{3})x_1^2 + x_1x_2 + (-4 + 4x_2^2)x_2^2, $$
-
-which is defined over the square $$ [-5,5]^2 $$.
-
-We recommend running the notebook example in `Examples/camel_2d.ipynb` as a first example to get familiar with the package.
-
-```julia
-using Globtim
-
-# Domain
-const n, a, b = 2, 5, 1
-const scale_factor = a / b
-
-# Sampling parameters
-const delta, alpha = .9 , 8 / 10
-
-# Define the tolerance for the L2-norm
-d = 6 # Initial Degree
-const tol_l2 = 3e-4
-
-# Set the objective function
-f = camel
-```
-
-We construct the discrete least squares polynomial (DLSP) approximant. We iterate increasing the decree of the approximant until the discrete $$ L^2 $$-norm is smaller than the threshold `tol_l2`.
-
-```julia
-while true # Potential infinite loop
-    global poly_approx = MainGenerate(f, 2, d, delta, alpha, scale_factor, 0.2) # computes the approximant in Chebyshev basis
-    if poly_approx.nrm < tol_l2
-        println("attained the desired L2-norm: ", poly_approx.nrm)
-        break
-    else
-        println("current L2-norm: ", poly_approx.nrm)
-        println("Number of samples: ", poly_approx.N)
-        global d += 1
-    end
-end
-```
-
-Once we have the coefficients of the polynomial approximant, we construct the polynomial system of partial derivatives using the `DynamicalPolynomials` environment, then we solve it using `HomotopyContinuation` in this first examples. Alternatively, one could use symbolic methods.
-
-```julia
-using DynamicPolynomials, HomotopyContinuation, ProgressLogging, DataFrames
-@polyvar(x[1:n])
-ap = main_nd(n, d, poly_approx.coeffs)
-PolynomialApproximant = sum(Float64.(ap) .* MonomialVector(x, 0:d)) # Convert coefficients to Float64 for homotopy continuation
-grad = differentiate.(PolynomialApproximant, x)
-sys = System(grad)
-Real_sol_lstsq = HomotopyContinuation.solve(sys)
-real_pts = HomotopyContinuation.real_solutions(Real_sol_lstsq; only_real=true, multiple_results=false)
-```
-
-Then we sort the critical points we found and retain only the ones that fall into the domain of definition and collect them into a dataframe structure.
-
-```julia
-condition(point) = -1 < point[1] < 1 && -1 < point[2] < 1
-filtered_points = filter(condition, real_pts)
-h_x = Float64[point[1] for point in filtered_points]
-h_y = Float64[point[2] for point in filtered_points]
-h_z = map(p -> f([p[1], p[2]]), zip(scale_factor * h_x, scale_factor * h_y))
-df = DataFrame(x=scale_factor * h_x, y=scale_factor * h_y, z= h_z)
-```
-
-We obtain the following 15 critical points plotted in orange, 6 of them are local minimizers of `f`.
-
-<div style="text-align: center;">
-  <img src="../assets/img/camel_6humps.png" alt="Six-hump Camel Function" width="500">
-</div>
-
-<br><br><br>
-
-## What If There Is Noise ?
-
-Let us assume a Gaussian noise affects the evaluation of the following `CrossInTray` function:
+The following is the Deuflhard function, a standard example in Optimization:
 
 $$
-    f(x, y) =  \frac{-1}{1000} \left( \left\vert \sin(x) \sin(y) \exp \left( \left\vert 100 - \frac{\sqrt{x^2 + y^2}}{\pi} \right\vert \right) \right\vert + 1 \right)^{\frac{1}{10}}.
+f(x, y) = \left( e^{x^2 + y^2} - 3 \right)^2 + \left( x + y - \sin(3(x + y)) \right)^2.
 $$
 
-We define the noisy version of the `CrossInTray` objective function
+It admits tow local maximizers and 6 local minimizers in the standard 2-cube.
 
-```julia
-using Distributions
+### Exact evaluations
 
-function noisy_CrossInTray(xx::Vector{Float64}; mean::Float64=0.0, stddev::Float64=1.0)::Float64
-    noise = rand(Normal(mean, stddev))
-    return CrossInTray(xx) + noise
-end
-```
+In the exact evaluation model, we will prioritize a high accuracy of the discrete least squares approximant over the number of samples we choose to generate.
+The display of sample points and critical points can be turned **on/off** by clicking on them in the legend of the right top corner of the interactive plot.
 
-First, we re-iterate the procedure described above, we capture all local minima at degree $d=11$, with tolerance set to `tol_l2=3e-2`.
-We notice that we also find some critical points along the spikes of the function (the red cross of points at the level `z=0`). Those spikes are present in the function, but hard to detect by sampling points, one can see them as a set of measure $$ 0 $$ in $$ [-10, 10]^2 $$. Because of the symmetry of the function and of our sampling scheme, the approximant admits critical points exactly along these ridges and detects the spikes of the `CrossInTray` function.
+<iframe src="/assets/plotly/Deuflhard/3d_Deuflhard.html" width="100%" height="1000px" frameborder="0"></iframe> <div style="text-align: center; margin-top: 10px;"> <strong>Legend:</strong> <span style="color: red;">Red - Critical Points of the polynomial approximant</span> </div>
 
-<iframe src="/assets/plotly/CrossInTray_surf_exact.html" width="100%" height="800px" frameborder="0"></iframe>
+Here the degree of the polynomial approximant is $12$ and the number of samples is.
 
-We reset the starting degree and slightly relax the tolerance in the $$ L^2 $$-norm, which is not necessary in the current example.
+### Noisy Evaluations
 
-```julia
-d = 4
-noisy_tol_l2 = 4e-2
-```
+We now affect the evaluations of `f` by a Gaussian random noise of standard deviation 5.  
+We can operate with a low tolerance and hope to get a very approximate location of the local minimizers of the function `f`.
 
-We run the sae loop to construct an accurate approximant, the last input of `MainGenerate`, which is set to `0.5`, is a relaxing factor on the number of samples we consider in the construction.
-Setting it to `1` makes the computations of the polynomial approx `poly_approx` consider more samples.
-This can make the calculations slower on more difficult examples, in exchange, we can attain the desired probabilistic guarantees on the accuracy of the approximant.
+<iframe src="/assets/plotly/Deuflhard/Deuflhard_low_tol.html" width="100%" height="1000px" frameborder="0"></iframe> <div style="text-align: center; margin-top: 10px;"> <strong>Legend:</strong> <span style="color: red;">Red - Critical Points of the exact polynomial approximant</span>
+<span style="color: orange;">Orange - Critical Points of the noise perturbed polynomial approximant</span>
+ </div>
 
-```julia
-while true # Potential infinite loop
-    global poly_approx_noisy = MainGenerate(f, 2, d, delta, alpha, scale_factor, 0.5)
-    if poly_approx_noisy.nrm < noisy_tol_l2
-        println("attained the desired L2-norm: ", poly_approx_noisy.nrm)
-        break
-    else
-        println("current L2-norm: ", poly_approx_noisy.nrm)
-        println("Number of samples: ", poly_approx_noisy.N)
-        global d += 1
-    end
-end
-```
+Or we can move to a more precise setting which will lead to much more sample points generated, and a much more accurate estimate of the local minimizers of the objective function
 
-In red, we observe the critical points of the approximant in the noiseless case. In orange, we display the critical points of the approximant of the current example, constructed on the (noisy) blue cloud of points. **By clicking on the labels in the plot below, turn on/off the display of that point-set in the plot.**
+<iframe src="/assets/plotly/Deuflhard/Deuflhard_high_tol.html" width="100%" height="1000px" frameborder="0"></iframe> <div style="text-align: center; margin-top: 10px;"> <strong>Legend:</strong> <span style="color: red;">Red - Critical Points of the exact polynomial approximant</span>
+<span style="color: orange;">Orange - Critical Points of the noise perturbed polynomial approximant</span>
+ </div>
 
-<iframe src="/assets/plotly/Noisy_CrossInTray.html" width="100%" height="800px" frameborder="0"></iframe> <div style="text-align: center; margin-top: 10px;"> <strong>Legend:</strong> <span style="color: red;">Red - Noiseless Critical Points</span>, <span style="color: orange;">Orange - Noisy Critical Points</span>, <span style="color: blue;">Blue - Noisy Data Points</span> </div>
+## Additional examples
 
-We display the critical points computed on the noisy data set over the exact surface
+We provide two more examples on well known objective functions, this time with the detailed associated Julia code.
 
-<iframe src="/assets/plotly/CrossInTray_surf_noisy_pts.html" width="100%" height="800px" frameborder="0"></iframe>
+- [Camel Function](/globtim/camel_function/)
+- [Trefethen Function](/globtim/trefethen_function/)

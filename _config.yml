@@ -55,8 +55,12 @@ rss_icon: false
 # -----------------------------------------------------------------------------
 
 navigation:
-  - title: "About"
+  - title: "Georgy Scholten"
     url: "/about/"
+  - title: "CV"
+    url: "/cv/"
+  - title: "Publications"
+    url: "/publications/"
   - title: "Globtim"
     url: "/globtim/"
 
@@ -68,7 +72,7 @@ navbar_fixed: true
 footer_fixed: true
 
 # Dimensions
-max_width: 800px
+max_width: 1400px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -367,7 +371,7 @@ imagemagick:
 
 enable_google_analytics: false # enables google analytics
 enable_cronitor_analytics: false # enables cronitor RUM analytics
-enable_google_verification: false # enables google site verification
+enable_google_verification: true # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
