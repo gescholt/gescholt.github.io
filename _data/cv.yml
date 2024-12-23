@@ -3,57 +3,108 @@
   contents:
     - name: Full Name
       value: Georgy Scholten
-    - name: Computer Languages
-      value: Python, Julia, Maple, R
     - name: Languages
       value: English, French, Russian
+    - name: Programming Languages
+      value: Julia, Maple, Python, R
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Mathematics
+    - title: PhD
       institution: North Carolina State University, Raleigh, NC
       year: 2021
       description:
-        - "Thesis title: <i>Combinatorial and Real Algebraic Structures in Statistics and Optimization.</i>"
-        - "Advisor: Dr. Cynthia Vinzant"
-        # - Description 2.
+        - Mathematics --  <i>Combinatorial and Real Algebraic Structures in Statistics and Optimization</i>.
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
         #     - Sub-description 2.
-    - title: Bachelor's degree in Mathematics
+    - title: Bachelor of Science
       institution: North Carolina State University, Raleigh, NC
       year: 2016
       description:
-        # - Description 1.
-        # - Description 2.
+        - Mathematics
 
 - title: Experience
   type: time_table
   contents:
     - title: Postdoctoral Researcher
-      institution: Sorbonne University, Laboratoire Jacques-Louis Lions and LIP6
-      year: 2021 - Present
-      description: Nonconvex optimization, approximation theory, real algebraic geometry, and statistics.
+      institution: Sorbonne University, Paris, France
+      year: 2021 -2024
+      description:
+        - Laboratoire Jacques-Louis Lions and LIP6
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#     - title: Topic 1.
+#       items:
+#         - Description 1.
+#         - Description 2.
+#     - title: Topic 2.
+#       items:
+#         - Description 1.
+#         - Description 2.
 
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
 
+# - title: General Information
+#   type: map
+#   contents:
+#     - name: Full Name
+#       value: Georgy Scholten
+#     - name: Computer Languages
+#       value: Python, Julia, Maple, R
+#     - name: Languages
+#       value: English, French, Russian
+
+# - title: Education
+#   type: time_table
+#   contents:
+#     - title: PhD in Mathematics
+#       institution: North Carolina State University, Raleigh, NC
+#       year: 2021
+#       description:
+#         - "Thesis title:Combinatorial and Real Algebraic Structures in Statistics and Optimization.</i>"
+#         - "Advisor: Dr. Cynthia Vinzant"
+#         # - Description 2.
+#         # - title: Description 3.
+#         #   contents:
+#         #     - Sub-description 1.
+#         #     - Sub-description 2.
+#     - title: Bachelor's degree in Mathematics
+#       institution: North Carolina State University, Raleigh, NC
+#       year: 2016
+#       description:
+#         # - Description 1.
+#         # - Description 2.
+
+# - title: Experience
+#   type: time_table
+#   contents:
+#     - title: Postdoctoral Researcher
+#       institution: Sorbonne University, Laboratoire Jacques-Louis Lions and LIP6
+#       year: 2021 - Present
+#       description: Nonconvex optimization, approximation theory, real algebraic geometry, and statistics.
 # - title: Honors and Awards
 #   type: time_table
 #   contents:
 #     - year: 1921
-#       items: 
-#         - Nobel Prize in Physics 
+#       items:
+#         - Nobel Prize in Physics
 #         - Matteucci Medal
 #     - year: 2029
-#       items: 
+#       items:
 #         - Max Planck Medal
 
 # - title: Academic Interests
 #   type: nested_list
 #   contents:
 #     - title: Topic 1.
-#       items: 
+#       items:
 #         - Description 1.
 #         - Description 2.
 #     - title: Topic 2.
