@@ -8,4 +8,9 @@ children:
   - title: publications
     permalink: /publications/
   - title: divider
+  - title: cv
+    permalink: /cv/
+  - title: divider
+  - title: Globtim
+    permalink: /globtim/
 ---
