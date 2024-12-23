@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About Me
 permalink: /
 subtitle: <a href='#'>Max Planck Institute of Molecular Cell Biology and Genetics</a>
 profile:
