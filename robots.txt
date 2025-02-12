@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://gescholt.github.io///sitemap.xml
+Sitemap: https://ghscholt.github.io/sitemap.xml
