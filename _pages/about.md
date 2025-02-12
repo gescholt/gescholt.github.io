@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a postdoc at the [Center for Systems Biology Dresden](https://www.csbdresden.de/), where I am a postdoctoral researcher part of the [Harrington Group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/group).
+I am currently at the [Center for Systems Biology Dresden](https://www.csbdresden.de/), where I am a postdoctoral researcher part of the [Harrington Group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/group).
 Previously, I was a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www-polsys.lip6.fr/) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.math.upmc.fr/).
 I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant](https://sites.math.washington.edu/~vinzant/) in May 2021.
 
