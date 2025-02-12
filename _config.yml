@@ -6,8 +6,8 @@ title: Georgy Scholten # the website title (if blank, full name will be used ins
 first_name: Georgy
 # middle_name: R.
 last_name: Scholten
-email: Georgy.Scholten@lip6.fr
-affiliations: LIP6, Sorbonne Université, Paris, France
+email: scholten@mpi-cbg.de
+affiliations: Max Planck Institute for Cell Biology and Genetics, Dresden, Germany
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics.
 footer_text: >
@@ -68,7 +68,7 @@ navbar_fixed: true
 footer_fixed: true
 
 # Dimensions
-max_width: 800px
+max_width: 1200px
 
 # TODO: add layout settings (single page vs. multi-page)
 
