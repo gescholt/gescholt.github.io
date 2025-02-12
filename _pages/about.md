@@ -25,5 +25,20 @@ I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant]
 My primary work involves studying mathematical structures that emerge within areas of the sciences and engineering.
 A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings.
 
-
-
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <video class="video-fluid w-100" controls>
+            <source src="{{ site.baseurl }}/assets/video/level_set_animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+<div class="caption">
+    Level sets of the Trefethen 3d function:
+$$
+\begin{align}
+f(x, y, z) = e^{\sin(50x_1)} + \sin(60e^{x_2})\sin(60x_3) + \sin(70\sin(x_1))\cos(10x_3) \\
++ \sin(\sin(80x_2)) - \sin(10(x_1 + x_3)) + \frac{x_1^2 + x_2^2 + x_3^2}{4}
+\end{align}
+$$
+</div>

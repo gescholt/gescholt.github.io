@@ -31,6 +31,6 @@ f(x, y) = \\exp(\\sin(50  x\[1\])) + \\sin(60  \\exp(x\[2\])) + \\sin(70 \\sin(x
 
 $$
 
-This function has about $2720$ critical pointsin $\[-1, 1\]^2$, which is slightly too much for us, at least for the moment, hence we subdivide the domain.  
+This function has about $2720$ critical points in $\[-1, 1\]^2$, which is slightly too much for us, at least for the moment, hence we subdivide the domain.  
 
 <iframe src="/assets/plotly/trefethen_function_plot.html" width="100%" height="800px" frameborder="0"></iframe>

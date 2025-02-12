@@ -1,38 +1,49 @@
+@use 'sass:color';
+
 /*******************************************************************************
  * Variables used throughout the theme.
  * To adjust anything, simply edit the variables below and rebuild the theme.
  ******************************************************************************/
 
+ // Layout
+$max-content-width: 1200px; // Adjust this value as needed
+
+// Breakpoints for responsive design
+$large-breakpoint: 1024px;
+$medium-breakpoint: 768px;
+$small-breakpoint: 576px;
 
 // Colors
-$red-color:           #FF3636 !default;
-$red-color-dark:      #B71C1C !default;
-$orange-color:        #F29105 !default;
-$blue-color:          #0076df !default;
-$blue-color-dark:     #00369f !default;
-$cyan-color:          #2698BA !default;
-$light-cyan-color:    lighten($cyan-color, 25%);
-$green-color:         #00ab37 !default;
-$green-color-lime:    #B7D12A !default;
-$green-color-dark:    #009f06 !default;
-$green-color-light:   #ddffdd !default;
-$green-color-bright:  #11D68B !default;
-$purple-color:        #B509AC !default;
-$light-purple-color:  lighten($purple-color, 25%);
-$pink-color:          #f92080 !default;
-$pink-color-light:    #ffdddd !default;
-$yellow-color:        #efcc00 !default;
+$code-bg-color-light: #f8f9fa; // Light theme code background
+$code-bg-color-dark: #2d2d2d; // Dark theme code background
+$red-color: #FF3636 !default;
+$red-color-dark: #B71C1C !default;
+$orange-color: #F29105 !default;
+$blue-color: #0076df !default;
+$blue-color-dark: #00369f !default;
+$cyan-color: #2698BA !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%) !default;
+$green-color: #00ab37 !default;
+$green-color-lime: #B7D12A !default;
+$green-color-dark: #009f06 !default;
+$green-color-light: #ddffdd !default;
+$green-color-bright: #11D68B !default;
+$purple-color: #B509AC !default;
+$light-purple-color: color.adjust($purple-color, $lightness: 25%) !default;
+$pink-color: #f92080 !default;
+$pink-color-light: #ffdddd !default;
+$yellow-color: #efcc00 !default;
 
-$grey-color:          #828282 !default;
-$grey-color-light:    lighten($grey-color, 40%);
-$grey-color-dark:     #1C1C1D;
-$grey-900:            #212529;
-
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
-
-
-// Theme colors
-
-$code-bg-color-light:     rgba($purple-color, 0.05);
-$code-bg-color-dark:      #2c3237 !default;
+$grey-color: #828282 !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
+$grey-color-dark: #1C1C1D;
+$grey-900: #212529;
+$white-color: #ffffff;
+$code-bg-color-light: #f8f9fa;
+$black-color: #000000;
+$grey-color: #828282;
+$purple-color: #B509AC;
+$grey-color-dark: #1C1C1D;
+$grey-color-light: #E8E8E8;
+$cyan-color: #2698BA;
+$grey-900: #212529;

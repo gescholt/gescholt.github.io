@@ -119,6 +119,9 @@ youtube_id: georgyscholten1827
 discord_id: # your discord id (18-digit unique numerical identifier)
 zotero_username: # your zotero username
 
+social:
+  - icon: fab fa-youtube
+    url: https://youtube.com/c/
 contact_note: >
   Please reach out to me using the email listed above.
 
