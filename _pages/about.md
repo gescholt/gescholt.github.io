@@ -9,9 +9,9 @@ profile:
   image: profile.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Office 26-00 328 </p>
-    <p>7 Place Jussieu</p>
-    <p>75005 Paris, France</p>
+    <p>Center for Systems Biology Dresden </p>
+    <p>Pfotenhauerstr. 108</p>
+    <p>01307 Dresden Germany</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
