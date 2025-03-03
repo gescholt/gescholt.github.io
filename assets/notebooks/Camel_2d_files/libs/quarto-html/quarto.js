@@ -188,9 +188,10 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
           categoryEl.appendChild(linkEl);
         }
       }
-    } catch {
-      // Ignore errors
-    }
+    } catch (error) {
+  // Ignore errors
+}
+
   };
   function hasTitleCategories() {
     return window.document.querySelector(categorySelector) !== null;
