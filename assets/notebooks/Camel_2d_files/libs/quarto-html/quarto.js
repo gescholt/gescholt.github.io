@@ -719,7 +719,7 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
   };
   let localReaderMode = null;
 
-  const tocOpenDepthStr = tocEl?.getAttribute("data-toc-expanded");
+  const tocOpenDepthStr = tocEl && tocEl.getAttribute("data-toc-expanded");
   const tocOpenDepth = tocOpenDepthStr ? Number(tocOpenDepthStr) : 1;
 
   // Walk the TOC and collapse/expand nodes
