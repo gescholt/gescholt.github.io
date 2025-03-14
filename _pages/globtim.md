@@ -7,15 +7,15 @@ nav: true
 nav_order: 3
 ---
 
-Globtim is a Julia package for solving global optimization problems via polynomial approximations.
+[Globtim](https://github.com/gescholt/Globtim.jl) is a Julia package for solving global optimization problems via polynomial approximations.
 
-For this method to work, we only require access to evaluations of the objective function $$f$$.  
+For this method to work, we only require access to evaluations of the objective function `f`.  
 
 We call this method global because we seek to compute all local minima of the objective function `f`, a real continuous function defined over some given rectangular domain in $$\mathbb{R}^n$$. 
 
 Our method is carried out in 3 main steps:
 
-1. The input function $f$ is sampled on a tensorized Chebyshev grid
+1. The input function `f` is sampled on a tensorized Chebyshev grid
 2. A polynomial approximant is constructed via a discrete least squares
 3. The polynomial system of Partial derivatives is solved by either homotopy continuation (numerical  method) or through exact polynomial system solving (symbolic method)
 
