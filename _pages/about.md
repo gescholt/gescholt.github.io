@@ -23,6 +23,24 @@ I am currently at the [Center for Systems Biology Dresden](https://www.csbdresde
 Previously, I was a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www-polsys.lip6.fr/) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.math.upmc.fr/).
 I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant](https://sites.math.washington.edu/~vinzant/) in May 2021.
 
+## News
+
+{% assign news = site.news | reverse %}
+{% for item in news limit:5 %}
+<div class="news">
+  <div class="row">
+    <div class="col-sm-2 abbr">
+      <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle">
+        {{ item.date | date: "%b %Y" }}
+      </span>
+    </div>
+    <div class="col-sm-10">
+      {{ item.content }}
+    </div>
+  </div>
+</div>
+{% endfor %}
+
 My primary work involves studying mathematical structures that emerge from the study of dynamic and biological systems.
 A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings.
 

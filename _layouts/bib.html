@@ -145,6 +145,9 @@
           {%- if entry.arxiv %}
             <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
           {%- endif %}
+          {%- if entry.hal_id %}
+            <a href="https://hal.science/{{ entry.hal_id }}{% if entry.hal_version %}{{ entry.hal_version }}{% endif %}" class="btn btn-sm z-depth-0" role="button">HAL</a>
+          {%- endif %}
           {%- if entry.bibtex_show %}
             <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
           {%- endif %}
