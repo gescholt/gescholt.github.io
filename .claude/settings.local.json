@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle update:*)",
+      "Bash(gem install:*)",
+      "Bash(gem which:*)",
+      "Bash(/opt/homebrew/lib/ruby/gems/3.4.0/bin/bundle update)",
+      "Bash(npm outdated)",
+      "Bash(npm update)",
+      "Bash(ls:*)",
+      "Bash(ruby:*)",
+      "Bash(gem uninstall:*)",
+      "Bash(/opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle update)",
+      "Bash(brew list:*)",
+      "Bash(brew:*)",
+      "Bash(brew upgrade:*)",
+      "Bash(gem pristine:*)",
+      "Bash(bundle --version)",
+      "Bash(bundle:*)",
+      "WebFetch(domain:hal.science)",
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(find:*)",
+      "Bash(npm audit:*)",
+      "Bash(git remote:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git rebase:*)",
+      "Bash(git tag:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker:*)"
+    ],
+    "deny": []
+  }
+}
