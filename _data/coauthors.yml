@@ -1,0 +1,68 @@
+# Co-authors with their website URLs
+# Format: LastName:
+#   - firstname: [FirstName, AlternativeName]
+#     url: website_url
+
+Hong:
+  - firstname: [Hoon]
+    url: https://hong.math.ncsu.edu/
+
+Kim:
+  - firstname: [Yonggu] 
+    url: # Add Yonggu Kim's website URL here
+
+Sendra:
+  - firstname: [J. Rafael, Rafael]
+    url: https://www.cunef.edu/en/faculty-and-research/sendra-pons-juan-rafael/
+
+Vinzant:
+  - firstname: [Cynthia]
+    url: https://sites.math.washington.edu/~vinzant/
+
+Grosdos:
+  - firstname: [Alexandros]
+    url: https://alexgrosdos.com/
+
+Heaton:
+  - firstname: [Alexander]
+    url: https://sites.google.com/view/alexander-heaton
+
+Kubjas:
+  - firstname: [Kaie]
+    url: https://www.kaiekubjas.com/
+
+Kuznetsova:
+  - firstname: [Olga]
+    url: # Add Olga Kuznetsova's website URL here
+
+Sorea:
+  - firstname: [Miruna-Ştefana]
+    url: https://sites.google.com/view/mirunastefanasorea/
+
+Rosen:
+  - firstname: [Zvi]
+    url: https://www.zvihrosen.com/
+
+"Safey El Din":
+  - firstname: [Mohab]
+    url: https://safey.perso.lip6.fr/
+
+Trélat:
+  - firstname: [Emmanuel]
+    url: https://www.ljll.fr/trelat/
+
+Çelik:
+  - firstname: [Türkü Özlüm]
+    url: https://sites.google.com/view/tocj/home
+
+Haas:
+  - firstname: [Pierre A.]
+    url: https://www.pks.mpg.de/self-organization-of-multicellular-systems/people/pierre-haas
+
+Wang:
+  - firstname: [Kexin]
+    url: https://wangk9562.wixsite.com/kexinwang
+
+Zucal:
+  - firstname: [Giulio]
+    url: https://sites.google.com/view/giulio-zucal/home-page
