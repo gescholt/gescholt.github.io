@@ -21,7 +21,9 @@ Our method is carried out in 3 main steps:
 
 ## 2D Optimization Examples
 
-<iframe src="/assets/plotly/trefethen_function_plot.html" width="100%" height="800px" frameborder="0"></iframe>
+<div class="plotly-container">
+    <iframe src="/assets/plotly/trefethen_function_plot.html" width="100%" height="800px" frameborder="0"></iframe>
+</div>
 
 Here we consider the Trefethen function from the Problem 4 of the [100 Digit challenge](https://en.wikipedia.org/wiki/Hundred-dollar,_Hundred-digit_Challenge_problems). All of its critical points displayed in orange have been computed using the Globtim package over the $$[-.2, .2]^2$$ domain.
 

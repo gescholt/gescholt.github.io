@@ -71,6 +71,35 @@ blockquote {
 .equation {
   margin-bottom: 1rem;
   text-align: center;
+  overflow-x: auto;
+  
+  @media (max-width: 576px) {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+}
+
+// MathJax mobile responsiveness
+mjx-container[jax="CHTML"][display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  @media (max-width: 768px) {
+    font-size: 85%;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 75%;
+  }
+}
+
+// Math in captions
+.caption {
+  mjx-container[jax="CHTML"][display="true"] {
+    @media (max-width: 576px) {
+      font-size: 70%;
+    }
+  }
 }
 
 // Caption
@@ -725,6 +754,19 @@ footer.sticky-bottom {
 // Rouge Color Customization
 figure.highlight {
   margin: 0 0 1rem;
+  
+  // Mobile responsiveness for code blocks
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    overflow-x: auto;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 0.85rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 0;
+  }
 }
 
 pre {
@@ -732,6 +774,15 @@ pre {
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
+  overflow-x: auto;
+  line-height: 1.4;
+  
+  // Better mobile experience
+  @media (max-width: 576px) {
+    padding: 8px;
+    border-radius: 0;
+    font-size: 0.85rem;
+  }
 
   pre,
   code {
@@ -747,6 +798,45 @@ code {
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
   padding: 3px 3px;
+  font-size: 0.95em;
+  
+  // Prevent code from breaking layout on mobile
+  word-wrap: break-word;
+}
+
+// Enhanced Julia syntax highlighting
+.language-julia {
+  .k, .kd, .kn, .kr { color: #d73a49; } // Keywords (function, if, else, etc.)
+  .s, .s1, .s2 { color: #032f62; } // Strings
+  .c, .c1, .cm { color: #6a737d; font-style: italic; } // Comments
+  .n, .nf { color: #6f42c1; } // Function names
+  .o { color: #d73a49; } // Operators
+  .nb { color: #005cc5; } // Built-in functions
+  .mi, .mf { color: #005cc5; } // Numbers
+  .kt { color: #d73a49; } // Types
+}
+
+// Dark theme Julia highlighting
+[data-theme="dark"] .language-julia {
+  .k, .kd, .kn, .kr { color: #ff7b72; }
+  .s, .s1, .s2 { color: #a5d6ff; }
+  .c, .c1, .cm { color: #8b949e; }
+  .n, .nf { color: #d2a8ff; }
+  .o { color: #ff7b72; }
+  .nb { color: #79c0ff; }
+  .mi, .mf { color: #79c0ff; }
+  .kt { color: #ff7b72; }
+}
+
+// Code block copy button improvements
+.code-display-wrapper {
+  @media (max-width: 576px) {
+    .copy {
+      right: 0.25rem;
+      top: 0.25rem;
+      font-size: small;
+    }
+  }
 }
 
 
@@ -1033,5 +1123,72 @@ nav[data-toggle="toc"] {
     font-size: 0.875rem;
     margin-bottom: 0;
     padding-top: 0.5rem;
+  }
+}
+
+// Enhanced embedded content styling
+.notebook-container,
+.plotly-container {
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--global-divider-color);
+  
+  iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    
+    @media (max-width: 768px) {
+      height: 600px !important;
+    }
+    
+    @media (max-width: 576px) {
+      height: 500px !important;
+      border-radius: 4px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+// Video content improvements
+.video-fluid {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 576px) {
+    border-radius: 4px;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    width: calc(100% + 1rem) !important;
+  }
+}
+
+// Caption improvements for embedded content
+.caption {
+  &.embedded-caption {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--global-card-bg-color);
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 0 4px 4px 0;
+    
+    @media (max-width: 576px) {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      border-radius: 0;
+    }
   }
 }
