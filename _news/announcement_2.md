@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New pre-print available: [Strata of Ecological Coexistence via Grassmannians](https://arxiv.org/abs/2509.00165) with Türkü Özlüm Çelik, Pierre A. Haas, Kexin Wang, and Giulio Zucal is now available on arXiv.
+Pre-print available: [Strata of Ecological Coexistence via Grassmannians](https://arxiv.org/abs/2509.00165) with Türkü Özlüm Çelik, Pierre A. Haas, Kexin Wang, and Giulio Zucal is now available on arXiv.
