@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Georgy Scholten
+title: About
 permalink: /
 # subtitle: 
 
@@ -59,4 +59,4 @@ f(x, y, z) = e^{\sin(50x_1)} + \sin(60e^{x_2})\sin(60x_3) + \sin(70\sin(x_1))\co
 + \sin(\sin(80x_2)) - \sin(10(x_1 + x_3)) + \frac{x_1^2 + x_2^2 + x_3^2}{4}
 \end{align}
 </div>
-The locations of the critical points have been computed using the [Globtim package]({% link _pages/globtim.md %}).
+The locations of the critical points have been computed using the [Globtim package](https://gescholt.github.io/Globtim.jl/dev/).
