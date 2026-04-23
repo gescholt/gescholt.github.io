@@ -5,7 +5,7 @@ title: Globtim
 date: 2024-08-07
 nav: false
 nav_order: 3
-published: false
+published: true
 ---
 
 [Globtim](https://github.com/gescholt/Globtim.jl) is a Julia package for solving global optimization problems via polynomial approximations.
