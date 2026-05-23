@@ -9,9 +9,7 @@ profile:
   image: profile.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Center for Systems Biology Dresden </p>
-    <p>Pfotenhauerstr. 108</p>
-    <p>01307 Dresden Germany</p>
+    <p><a href="https://lancium.com/">Lancium</a></p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
@@ -19,8 +17,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently at the [Center for Systems Biology Dresden](https://www.csbdresden.de/), where I am a postdoctoral researcher part of the [Harrington Group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/group).
-Previously, I was a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www-polsys.lip6.fr/) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.math.upmc.fr/).
+I am currently at [Lancium](https://lancium.com/).
+Previously, I was a postdoctoral researcher at the [Center for Systems Biology Dresden](https://www.csbdresden.de/), part of the [Harrington Group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/group), and before that a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www-polsys.lip6.fr/) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.math.upmc.fr/).
 I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant](https://sites.math.washington.edu/~vinzant/) in May 2021.
 
 ## News
