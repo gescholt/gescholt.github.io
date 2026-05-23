@@ -57,6 +57,8 @@ rss_icon: false
 navigation:
   - title: "About"
     url: "/about/"
+  - title: "CV"
+    url: "/cv/"
   - title: "Globtim"
     url: "/globtim/"
 
