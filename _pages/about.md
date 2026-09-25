@@ -17,7 +17,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a machine learning engineer at [Lancium](https://lancium.com/).
+I am a machine learning engineer at [Lancium](https://lancium.com/), where I work on optimizing the delivery of energy to the data centers Lancium serves.
 Previously, I was a postdoctoral researcher at the [Center for Systems Biology Dresden](https://www.csbdresden.de/), part of the [Harrington Group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/group), and before that a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www-polsys.lip6.fr/) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.math.upmc.fr/).
 I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant](https://sites.math.washington.edu/~vinzant/) in May 2021.
 
@@ -46,7 +46,7 @@ I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant]
 </ul>
 {% endif %}
 
-My primary work involves studying mathematical structures that emerge from the study of dynamic and biological systems.
+My research focuses on mathematical structures that emerge from the study of dynamic and biological systems.
 A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings.
 
 <div class="row mt-3">
