@@ -1,0 +1,284 @@
+/*******************************************************************************
+ * Visual refresh: typography, spacing and components layered on the al-folio
+ * base styles. Loaded last from assets/css/main.scss.
+ ******************************************************************************/
+
+$font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Typography
+
+body {
+  font-family: $font-sans;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-sans;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-header .post-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.post-description {
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+code {
+  font-size: 0.875em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background-color: var(--global-code-bg-color);
+}
+
+.caption {
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+// Navbar
+
+.navbar {
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--global-divider-color);
+
+  .navbar-brand {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+}
+
+// Profile (about page)
+
+.profile {
+  img {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .address {
+    font-family: $font-sans;
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.75rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .profile {
+    width: 26%;
+    margin-left: 2rem !important;
+  }
+}
+
+// News (about page)
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+
+  li {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .news-date {
+    flex: 0 0 5.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+  }
+}
+
+// Media blocks
+
+.video-fluid {
+  display: block;
+  max-width: 760px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+// Social icons
+
+.social {
+  margin-top: 3rem;
+
+  .contact-icons {
+    font-size: 1.6rem;
+
+    a {
+      margin: 0 0.6rem;
+
+      i::before {
+        color: var(--global-text-color-light);
+      }
+    }
+  }
+
+  .contact-note {
+    color: var(--global-text-color-light);
+    margin-top: 0.5rem;
+  }
+}
+
+// Footer
+
+footer.sticky-bottom {
+  margin-top: 4rem !important;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.8rem;
+
+  .container,
+  .container a {
+    color: var(--global-text-color-light);
+  }
+}
+
+// Publications
+
+.publications {
+  h2.bibliography {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-align: left;
+    border-top: none;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0;
+  }
+
+  ol.bibliography li {
+    margin-bottom: 0.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--global-theme-color) 40%, transparent);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin-bottom: 0.2rem;
+    }
+
+    .author,
+    .periodical {
+      font-size: 0.925rem;
+      color: var(--global-text-color-light);
+
+      em {
+        color: var(--global-text-color-light);
+      }
+    }
+
+    .author a {
+      border-bottom: none;
+    }
+
+    .author > em {
+      border-bottom: none;
+      font-weight: 600;
+      color: var(--global-text-color);
+    }
+
+    .links {
+      margin-top: 0.6rem;
+
+      a.btn {
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: none;
+        color: var(--global-theme-color);
+        border: 1px solid color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+        border-radius: 999px;
+        padding: 0.15rem 0.8rem;
+        margin: 0 0.35rem 0.35rem 0;
+        box-shadow: none;
+
+        &:hover {
+          color: var(--global-hover-text-color);
+          background-color: var(--global-theme-color);
+          border-color: var(--global-theme-color);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .badges {
+      padding-bottom: 0;
+      margin-top: 0.25rem;
+
+      // badge scripts leave empty placeholders when there is nothing to show
+      &:not(:has(img, iframe, a)) {
+        display: none;
+      }
+    }
+
+    .row {
+      margin: 0;
+
+      > [class*="col-"] {
+        padding: 0;
+      }
+    }
+  }
+}

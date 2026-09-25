@@ -8,7 +8,7 @@ nav_order: 3
 published: true
 ---
 
-[Globtim](https://github.com/gescholt/Globtim.jl) is a Julia package for solving global optimization problems via polynomial approximations.
+[Globtim](https://github.com/gescholt/Globtim.jl) is a Julia package for solving global optimization problems via polynomial approximations. It is registered in the Julia General registry (`pkg> add Globtim HomotopyContinuation`), and the documentation is available [here](https://gescholt.github.io/Globtim.jl/stable/). The underlying algorithm is described in [this paper](https://doi.org/10.1007/s00498-026-00441-3).
 
 For this method to work, we only require access to evaluations of the objective function `f`.  
 
@@ -19,6 +19,20 @@ Our method is carried out in 3 main steps:
 1. The input function `f` is sampled on a tensorized Chebyshev grid
 2. A polynomial approximant is constructed via a discrete least squares
 3. The polynomial system of Partial derivatives is solved by either homotopy continuation (numerical  method) or through exact polynomial system solving (symbolic method)
+
+## Level Set Examples
+
+<div class="row mt-3 align-items-center">
+    <div class="col-sm-5 mt-3 mt-md-0">
+        <img class="img-fluid rounded" src="{{ '/assets/img/globtim/deuflhard.svg' | relative_url }}" alt="Critical points of the Deuflhard function">
+    </div>
+    <div class="col-sm-7 mt-3 mt-md-0">
+        <img class="img-fluid rounded" src="{{ '/assets/img/globtim/camel_levelset.svg' | relative_url }}" alt="Six-hump camel polynomial level set">
+    </div>
+</div>
+<div class="caption">
+    Left: critical points of the Deuflhard function computed with Globtim, with local minima (red diamonds) and the remaining critical points (white circles). Right: a degree-6 Chebyshev approximant of the six-hump camel function, with the critical points of the polynomial and the refined minima.
+</div>
 
 ## 2D Optimization Examples
 

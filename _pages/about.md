@@ -24,27 +24,21 @@ I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant]
 ## News
 
 {% assign news = site.news | reverse %}
+<ul class="news-list">
 {% for item in news limit:5 %}
-<div class="news">
-  <div class="row">
-    <div class="col-sm-2 abbr">
-      <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle">
-        {{ item.date | date: "%b %Y" }}
-      </span>
-    </div>
-    <div class="col-sm-10">
-      {{ item.content }}
-    </div>
-  </div>
-</div>
+  <li>
+    <span class="news-date">{{ item.date | date: "%b %Y" }}</span>
+    <div>{{ item.content }}</div>
+  </li>
 {% endfor %}
+</ul>
 
 My primary work involves studying mathematical structures that emerge from the study of dynamic and biological systems.
 A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        <video class="video-fluid w-100" controls>
+        <video class="video-fluid w-100" controls muted loop playsinline preload="metadata" poster="{{ site.baseurl }}/assets/video/level_set_animation_poster.jpg">
             <source src="{{ site.baseurl }}/assets/video/level_set_animation.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -57,4 +51,4 @@ f(x, y, z) = e^{\sin(50x_1)} + \sin(60e^{x_2})\sin(60x_3) + \sin(70\sin(x_1))\co
 + \sin(\sin(80x_2)) - \sin(10(x_1 + x_3)) + \frac{x_1^2 + x_2^2 + x_3^2}{4}
 \end{align}
 </div>
-The locations of the critical points have been computed using the [Globtim package](https://gescholt.github.io/Globtim.jl/dev/).
+The locations of the critical points have been computed using the [Globtim package](https://gescholt.github.io/Globtim.jl/stable/).
