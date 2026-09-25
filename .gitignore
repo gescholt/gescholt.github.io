@@ -9,3 +9,5 @@ _site
 Gemfile.lock
 vendor
 
+assets/website_illustrations/
+node_modules/
