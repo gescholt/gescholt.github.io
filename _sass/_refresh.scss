@@ -282,3 +282,47 @@ footer.sticky-bottom {
     }
   }
 }
+
+// Featured project card (about page)
+
+.feature-card {
+  display: flow-root; // sit beside the floated profile photo, not under it
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--global-divider-color);
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 10px;
+
+  .feature-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    margin: 0.25rem 0 0.4rem;
+  }
+
+  p {
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-links a {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.15rem 0.8rem;
+    margin-right: 0.35rem;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+    border-radius: 999px;
+
+    &:hover {
+      color: var(--global-hover-text-color);
+      background-color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
