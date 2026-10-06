@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="A coalescent genealogy above a piecewise-constant population history">
+<title>A coalescent genealogy above a piecewise-constant population history</title>
+<style>
+.pi-bg{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 7%,transparent)}
+.pi-ink{fill:none;stroke:var(--global-text-color,#333);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pi-soft{fill:none;stroke:var(--global-text-color-light,#828282);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+.pi-acc{fill:none;stroke:var(--global-theme-color,#2458b3);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pi-dot{fill:var(--global-theme-color,#2458b3);stroke:var(--global-bg-color,#fff);stroke-width:1.5}
+.pi-pt{fill:var(--global-text-color,#333)}
+.pi-wash{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 18%,transparent)}
+.pi-txt{fill:var(--global-text-color-light,#828282);font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;opacity:.8}
+</style>
+<rect class="pi-bg" width="200" height="200" rx="14"/>
+<path class="pi-wash" d="M25 172 L25 150 L70 150 L70 122 L115 122 L115 138 L175 138 L175 172 Z"/>
+<polyline class="pi-acc" points="25,150 70,150 70,122 115,122 115,138 175,138"/>
+<line class="pi-soft" x1="16" y1="172" x2="184" y2="172"/>
+<polyline class="pi-ink" points="25,32 55,32 55,40"/>
+<polyline class="pi-ink" points="25,48 55,48 55,40"/>
+<polyline class="pi-ink" points="25,80 80,80 80,88"/>
+<polyline class="pi-ink" points="25,96 80,96 80,88"/>
+<polyline class="pi-ink" points="55,40 100,40 100,52"/>
+<polyline class="pi-ink" points="25,64 100,64 100,52"/>
+<polyline class="pi-ink" points="100,52 150,52 150,70"/>
+<polyline class="pi-ink" points="80,88 150,88 150,70"/>
+<line class="pi-ink" x1="150" y1="70" x2="175" y2="70"/>
+<circle class="pi-dot" cx="55" cy="40" r="4"/>
+<circle class="pi-dot" cx="80" cy="88" r="4"/>
+<circle class="pi-dot" cx="100" cy="52" r="4"/>
+<circle class="pi-dot" cx="150" cy="70" r="4"/>
+<circle class="pi-pt" cx="25" cy="32" r="2.4"/>
+<circle class="pi-pt" cx="25" cy="48" r="2.4"/>
+<circle class="pi-pt" cx="25" cy="64" r="2.4"/>
+<circle class="pi-pt" cx="25" cy="80" r="2.4"/>
+<circle class="pi-pt" cx="25" cy="96" r="2.4"/>
+</svg>

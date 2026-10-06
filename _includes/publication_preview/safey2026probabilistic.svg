@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Level sets of a Morse function on a box, with its local minima and saddles marked">
+<title>Level sets of a Morse function on a box, with its local minima and saddles marked</title>
+<style>
+.pi-bg{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 7%,transparent)}
+.pi-ink{fill:none;stroke:var(--global-text-color,#333);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pi-soft{fill:none;stroke:var(--global-text-color-light,#828282);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+.pi-acc{fill:none;stroke:var(--global-theme-color,#2458b3);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pi-dot{fill:var(--global-theme-color,#2458b3);stroke:var(--global-bg-color,#fff);stroke-width:1.5}
+.pi-pt{fill:var(--global-text-color,#333)}
+.pi-wash{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 18%,transparent)}
+.pi-txt{fill:var(--global-text-color-light,#828282);font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;opacity:.8}
+</style>
+<rect class="pi-bg" width="200" height="200" rx="14"/>
+<rect class="pi-ink" x="15" y="15" width="170" height="170" rx="4"/>
+<rect class="pi-soft" x="24" y="24" width="152" height="152" rx="44"/>
+<ellipse class="pi-soft" cx="60" cy="70" rx="12" ry="9" transform="rotate(-20 60 70)"/>
+<ellipse class="pi-soft" cx="60" cy="70" rx="24" ry="18" transform="rotate(-20 60 70)"/>
+<ellipse class="pi-soft" cx="60" cy="70" rx="36" ry="27" transform="rotate(-20 60 70)"/>
+<ellipse class="pi-soft" cx="135" cy="60" rx="10" ry="13" transform="rotate(30 135 60)"/>
+<ellipse class="pi-soft" cx="135" cy="60" rx="20" ry="26" transform="rotate(30 135 60)"/>
+<ellipse class="pi-soft" cx="135" cy="60" rx="30" ry="38" transform="rotate(30 135 60)"/>
+<ellipse class="pi-soft" cx="100" cy="140" rx="14" ry="10" transform="rotate(10 100 140)"/>
+<ellipse class="pi-soft" cx="100" cy="140" rx="28" ry="20" transform="rotate(10 100 140)"/>
+<ellipse class="pi-soft" cx="100" cy="140" rx="42" ry="30" transform="rotate(10 100 140)"/>
+<path class="pi-ink" d="M93.5 58.5 L100.5 65.5 M93.5 65.5 L100.5 58.5"/>
+<path class="pi-ink" d="M74.5 104.5 L81.5 111.5 M74.5 111.5 L81.5 104.5"/>
+<path class="pi-ink" d="M118.5 98.5 L125.5 105.5 M118.5 105.5 L125.5 98.5"/>
+<circle class="pi-dot" cx="60" cy="70" r="5"/>
+<circle class="pi-dot" cx="135" cy="60" r="5"/>
+<circle class="pi-dot" cx="100" cy="140" r="5"/>
+</svg>

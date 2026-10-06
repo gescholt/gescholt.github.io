@@ -212,6 +212,19 @@ footer.sticky-bottom {
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     }
 
+    // Inline SVG illustration (see _includes/publication_preview/); colours come from the theme variables
+    .pub-illustration {
+      width: 100%;
+      max-width: 160px;
+      margin: 0.15rem 1.25rem 0.75rem 0;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
     .title {
       font-weight: 600;
       font-size: 1.05rem;

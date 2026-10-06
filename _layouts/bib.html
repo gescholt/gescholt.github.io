@@ -9,6 +9,10 @@
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
           <img data-zoomable class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+          {%- elsif entry.preview contains '.svg' -%}
+            {%- comment -%} Inline SVG illustrations from _includes/publication_preview/ so they follow the light/dark theme {%- endcomment -%}
+            {%- assign entry_svg = entry.preview | prepend: 'publication_preview/' -%}
+            <div class="pub-illustration">{% include {{ entry_svg }} %}</div>
           {%- else -%}
             {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
             {% include figure.html

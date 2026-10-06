@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Two tropical lines meeting in a single point, with a Sylvester matrix band">
+<title>Two tropical lines meeting in a single point, with a Sylvester matrix band</title>
+<style>
+.pi-bg{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 7%,transparent)}
+.pi-ink{fill:none;stroke:var(--global-text-color,#333);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pi-soft{fill:none;stroke:var(--global-text-color-light,#828282);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+.pi-acc{fill:none;stroke:var(--global-theme-color,#2458b3);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pi-dot{fill:var(--global-theme-color,#2458b3);stroke:var(--global-bg-color,#fff);stroke-width:1.5}
+.pi-pt{fill:var(--global-text-color,#333)}
+.pi-wash{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 18%,transparent)}
+.pi-txt{fill:var(--global-text-color-light,#828282);font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;opacity:.8}
+</style>
+<rect class="pi-bg" width="200" height="200" rx="14"/>
+<polyline class="pi-ink" points="12,120 70,120 70,188"/>
+<line class="pi-ink" x1="70" y1="120" x2="178" y2="12"/>
+<polyline class="pi-ink" points="12,75 145,75 145,188"/>
+<line class="pi-ink" x1="145" y1="75" x2="188" y2="32"/>
+<circle class="pi-pt" cx="26" cy="26" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="36" cy="26" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="46" cy="26" r="2.4" opacity=".55"/>
+<circle class="pi-soft" cx="56" cy="26" r="2"/>
+<circle class="pi-soft" cx="26" cy="36" r="2"/>
+<circle class="pi-pt" cx="36" cy="36" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="46" cy="36" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="56" cy="36" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="26" cy="46" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="36" cy="46" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="46" cy="46" r="2.4" opacity=".55"/>
+<circle class="pi-soft" cx="56" cy="46" r="2"/>
+<circle class="pi-soft" cx="26" cy="56" r="2"/>
+<circle class="pi-pt" cx="36" cy="56" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="46" cy="56" r="2.4" opacity=".55"/>
+<circle class="pi-pt" cx="56" cy="56" r="2.4" opacity=".55"/>
+<circle class="pi-dot" cx="115" cy="75" r="5"/>
+</svg>

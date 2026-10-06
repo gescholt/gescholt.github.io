@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="A tent-shaped log-density over data points and its exponential, the log-concave maximum likelihood estimate">
+<title>A tent-shaped log-density over data points and its exponential, the log-concave maximum likelihood estimate</title>
+<style>
+.pi-bg{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 7%,transparent)}
+.pi-ink{fill:none;stroke:var(--global-text-color,#333);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pi-soft{fill:none;stroke:var(--global-text-color-light,#828282);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+.pi-acc{fill:none;stroke:var(--global-theme-color,#2458b3);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pi-dot{fill:var(--global-theme-color,#2458b3);stroke:var(--global-bg-color,#fff);stroke-width:1.5}
+.pi-pt{fill:var(--global-text-color,#333)}
+.pi-wash{fill:color-mix(in srgb,var(--global-theme-color,#2458b3) 18%,transparent)}
+.pi-txt{fill:var(--global-text-color-light,#828282);font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;opacity:.8}
+</style>
+<rect class="pi-bg" width="200" height="200" rx="14"/>
+<line class="pi-soft" x1="16" y1="166" x2="184" y2="166"/>
+<path class="pi-wash" d="M30 160.5 L31 160.1 L32 159.7 L33 159.2 L34 158.8 L35 158.2 L36 157.7 L37 157.1 L38 156.5 L39 155.8 L40 155 L41 154.3 L42 153.4 L43 152.5 L44 151.5 L45 150.5 L46 149.4 L47 148.2 L48 146.9 L49 145.6 L50 144.1 L51 142.6 L52 140.9 L53 139.1 L54 137.2 L55 135.1 L56 134 L57 133 L58 131.8 L59 130.7 L60 129.5 L61 128.3 L62 127 L63 125.7 L64 124.3 L65 122.9 L66 121.4 L67 119.9 L68 118.3 L69 116.7 L70 115 L71 113.3 L72 111.5 L73 109.7 L74 107.8 L75 105.8 L76 103.8 L77 101.7 L78 99.5 L79 97.2 L80 94.9 L81 92.5 L82 90 L83 87.4 L84 84.7 L85 82 L86 81.7 L87 81.4 L88 81.1 L89 80.8 L90 80.5 L91 80.1 L92 79.8 L93 79.5 L94 79.2 L95 78.9 L96 78.6 L97 78.2 L98 77.9 L99 77.6 L100 77.3 L101 77 L102 76.6 L103 76.3 L104 76 L105 75.7 L106 75.3 L107 75 L108 74.7 L109 74.3 L110 74 L111 76.3 L112 78.6 L113 80.8 L114 83 L115 85.1 L116 87.2 L117 89.2 L118 91.1 L119 93 L120 94.9 L121 96.7 L122 98.5 L123 100.2 L124 101.9 L125 103.5 L126 105.1 L127 106.6 L128 108.1 L129 109.6 L130 111 L131 112.4 L132 113.8 L133 115.1 L134 116.4 L135 117.7 L136 118.9 L137 120.1 L138 121.3 L139 122.4 L140 123.5 L141 126.3 L142 128.9 L143 131.4 L144 133.7 L145 135.8 L146 137.8 L147 139.6 L148 141.4 L149 143 L150 144.5 L151 145.9 L152 147.3 L153 148.5 L154 149.6 L155 150.7 L156 151.7 L157 152.7 L158 153.5 L159 154.4 L160 155.1 L161 155.9 L162 156.5 L163 157.1 L164 157.7 L165 158.3 L166 158.8 L167 159.3 L168 159.7 L169 160.1 L170 160.5 L170 166 L30 166 Z"/>
+<polyline class="pi-ink" stroke-dasharray="4 3" points="30,166 55,128 85,106 110,104 140,121 170,166"/>
+<path class="pi-acc" d="M30 160.5 L31 160.1 L32 159.7 L33 159.2 L34 158.8 L35 158.2 L36 157.7 L37 157.1 L38 156.5 L39 155.8 L40 155 L41 154.3 L42 153.4 L43 152.5 L44 151.5 L45 150.5 L46 149.4 L47 148.2 L48 146.9 L49 145.6 L50 144.1 L51 142.6 L52 140.9 L53 139.1 L54 137.2 L55 135.1 L56 134 L57 133 L58 131.8 L59 130.7 L60 129.5 L61 128.3 L62 127 L63 125.7 L64 124.3 L65 122.9 L66 121.4 L67 119.9 L68 118.3 L69 116.7 L70 115 L71 113.3 L72 111.5 L73 109.7 L74 107.8 L75 105.8 L76 103.8 L77 101.7 L78 99.5 L79 97.2 L80 94.9 L81 92.5 L82 90 L83 87.4 L84 84.7 L85 82 L86 81.7 L87 81.4 L88 81.1 L89 80.8 L90 80.5 L91 80.1 L92 79.8 L93 79.5 L94 79.2 L95 78.9 L96 78.6 L97 78.2 L98 77.9 L99 77.6 L100 77.3 L101 77 L102 76.6 L103 76.3 L104 76 L105 75.7 L106 75.3 L107 75 L108 74.7 L109 74.3 L110 74 L111 76.3 L112 78.6 L113 80.8 L114 83 L115 85.1 L116 87.2 L117 89.2 L118 91.1 L119 93 L120 94.9 L121 96.7 L122 98.5 L123 100.2 L124 101.9 L125 103.5 L126 105.1 L127 106.6 L128 108.1 L129 109.6 L130 111 L131 112.4 L132 113.8 L133 115.1 L134 116.4 L135 117.7 L136 118.9 L137 120.1 L138 121.3 L139 122.4 L140 123.5 L141 126.3 L142 128.9 L143 131.4 L144 133.7 L145 135.8 L146 137.8 L147 139.6 L148 141.4 L149 143 L150 144.5 L151 145.9 L152 147.3 L153 148.5 L154 149.6 L155 150.7 L156 151.7 L157 152.7 L158 153.5 L159 154.4 L160 155.1 L161 155.9 L162 156.5 L163 157.1 L164 157.7 L165 158.3 L166 158.8 L167 159.3 L168 159.7 L169 160.1 L170 160.5"/>
+<circle class="pi-pt" cx="30" cy="166" r="3"/>
+<circle class="pi-pt" cx="55" cy="166" r="3"/>
+<circle class="pi-pt" cx="85" cy="166" r="3"/>
+<circle class="pi-pt" cx="110" cy="166" r="3"/>
+<circle class="pi-pt" cx="140" cy="166" r="3"/>
+<circle class="pi-pt" cx="170" cy="166" r="3"/>
+</svg>
