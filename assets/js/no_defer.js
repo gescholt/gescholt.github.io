@@ -9,8 +9,9 @@ $(document).ready(function () {
       $(this).removeClass('table-dark');
     }
 
-    // only select tables that are not inside an element with "news" (about page) or "card" (cv page) class
-    if ($(this).parents('[class*="news"]').length == 0 && $(this).parents('[class*="card"]').length == 0 && $(this).parents('code').length == 0) {
+    // only select tables that are not inside an element with "news" (about page) or "card" (cv page) class,
+    // and leave Markdown tables in blog posts alone: they are styled in _sass/_refresh.scss
+    if ($(this).parents('[class*="news"]').length == 0 && $(this).parents('[class*="card"]').length == 0 && $(this).parents('code').length == 0 && $(this).parents('.post-content').length == 0) {
       // make table use bootstrap-table
       $(this).attr('data-toggle', 'table');
       // add some classes to make the table look better
