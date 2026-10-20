@@ -142,14 +142,14 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-# blog_name: al-folio # blog_name will be displayed in your blog page
-# blog_nav_title: # your blog must have a title for it to be displayed in the nav bar
-# blog_description: a simple whitespace theme for academics
-# permalink: /blog/:year/:title/
+blog_name: Globtim at work # blog_name will be displayed in your blog page
+blog_nav_title: posts # your blog must have a title for it to be displayed in the nav bar
+blog_description: what the software can do, one story at a time
+permalink: /blog/:year/:title/
 
 # Pagination
 pagination:
-  enabled: false
+  enabled: true
 
 related_blog_posts:
   enabled: true
@@ -230,7 +230,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  - blog
+  - posts # raw drafts and their assets; the published versions live in _posts/
   - assets/website_illustrations
 keep_files:
   - CNAME
@@ -278,13 +278,17 @@ jekyll-minifier:
 jekyll-archives:
   posts:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    layouts:
+      year: archive-year
+      tags: archive-tag
+      categories: archive-category
     permalinks:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags will be displayed on the front page of your blog
-display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
+# display_tags: ['globtim'] # these tags will be displayed on the front page of your blog
+# display_categories: ['globtim-at-work'] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
