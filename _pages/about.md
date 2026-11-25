@@ -32,6 +32,18 @@ I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant]
   </div>
 </div>
 
+<div class="feature-card">
+  <div class="feature-label">Software</div>
+  <h3 class="feature-title"><a href="https://github.com/gescholt/signrules">signrules</a></h3>
+  <p>A Python package that proves Lotka–Volterra sign patterns impossible: no choice of magnitudes with the given signs has a stable positive equilibrium. Every proof comes with a machine certificate, which an independent checker replays.</p>
+  <div class="feature-links">
+    <a href="https://github.com/gescholt/signrules">GitHub</a>
+    <a href="https://pypi.org/project/ecological_sign_rules/">PyPI</a>
+    <a href="https://doi.org/10.5281/zenodo.24214426">Zenodo</a>
+    <a href="https://doi.org/10.1007/s00026-026-00837-7">Paper</a>
+  </div>
+</div>
+
 {% assign news = site.news | reverse %}
 {% if news.size > 0 %}
 ## News
@@ -48,6 +60,10 @@ I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant]
 
 My research focuses on mathematical structures that emerge from the study of dynamic and biological systems.
 A central motivation in my research is to combine symbolic and numerical methods in a best of both worlds approach, in order to enhance methods in optimization and statistical analysis which can be leveraged in various interdisciplinary settings.
+
+One line of this work concerns ecological networks.
+Whether a Lotka–Volterra community admits a feasible, stable equilibrium depends on the magnitudes of its growth rates and interactions, yet often only their signs are known.
+Encoding the parameters as a point of the real Grassmannian $$\mathrm{Gr}(n, 2n)$$ turns feasibility and stability into sign conditions on Plücker coordinates, and oriented-matroid arguments then prove that certain interaction networks cannot coexist stably for any choice of magnitudes ([Strata of Ecological Coexistence via Grassmannians](https://doi.org/10.1007/s00026-026-00837-7), Annals of Combinatorics, 2026).
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
