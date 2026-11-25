@@ -32,6 +32,19 @@ I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant]
   </div>
 </div>
 
+<div class="feature-card">
+  <div class="feature-label">Software</div>
+  <h3 class="feature-title"><a href="https://github.com/gescholt/signrules">signrules</a></h3>
+  <p>A Python package that proves Lotka–Volterra sign patterns impossible, with a machine certificate for every proof and an independent checker that replays it. It ships the classification of sign patterns on four, five and six species.</p>
+  <div class="feature-links">
+    <a href="https://pypi.org/project/ecological_sign_rules/">PyPI</a>
+    <a href="https://github.com/gescholt/signrules">GitHub</a>
+    <a href="https://github.com/gescholt/signrules/blob/main/docs/SIGNRULES.md">Docs</a>
+    <a href="https://doi.org/10.5281/zenodo.24214426">DOI</a>
+    <a href="https://doi.org/10.1007/s00026-026-00837-7">Paper</a>
+  </div>
+</div>
+
 {% assign news = site.news | reverse %}
 {% if news.size > 0 %}
 ## News
