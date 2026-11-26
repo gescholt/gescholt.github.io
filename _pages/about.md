@@ -35,7 +35,7 @@ I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant]
 <div class="feature-card">
   <div class="feature-label">Software</div>
   <h3 class="feature-title"><a href="https://github.com/gescholt/signrules">signrules</a></h3>
-  <p>A Python package that proves Lotka–Volterra sign patterns impossible: no choice of magnitudes with the given signs has a stable positive equilibrium. Every proof comes with a machine certificate, which an independent checker replays.</p>
+  <p>A Python package that proves Lotka–Volterra sign patterns impossible: no choice of magnitudes with the given signs has a stable positive equilibrium.</p>
   <div class="feature-links">
     <a href="https://github.com/gescholt/signrules">GitHub</a>
     <a href="https://pypi.org/project/ecological_sign_rules/">PyPI</a>
