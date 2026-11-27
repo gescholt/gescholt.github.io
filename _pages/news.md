@@ -5,6 +5,7 @@ permalink: /news/
 description: a list of news and announcements
 nav: false
 nav_order: 6
+published: false  # re-enable once _news/ has items
 ---
 
 <div class="news">
