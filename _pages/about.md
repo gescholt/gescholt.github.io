@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 I am a machine learning engineer at [Lancium](https://lancium.com/), where I work on optimizing the delivery of energy to the data centers Lancium serves.
-Previously, I was a postdoctoral researcher at the [Center for Systems Biology Dresden](https://www.csbdresden.de/), part of the [Harrington Group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/group), and before that a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www-polsys.lip6.fr/) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.math.upmc.fr/).
+Previously, I was a postdoctoral researcher at the [Center for Systems Biology Dresden](https://www.csbdresden.de/), part of the [Harrington Group](https://www.mpi-cbg.de/research/researchgroups/currentgroups/heather-harrington/group), and before that a postdoc at [Sorbonne Université](https://www.sorbonne-universite.fr/en), jointly in the [Polsys](https://www.lip6.fr/recherche/team.php?acronyme=PolSys&LANG=en) team and at the [Laboratoire Jacques-Louis Lions](https://www.ljll.fr/).
 I completed my PhD in Mathematics under the supervision of [Dr. Cynthia Vinzant](https://sites.math.washington.edu/~vinzant/) in May 2021.
 
 <div class="feature-card">

@@ -117,13 +117,10 @@ pinterest_id: # your pinterest id
 unsplash_id: # your unsplash id
 instagram_id: # your instagram id
 facebook_id: # your facebook id
-youtube_id: georgyscholten1827
+youtube_id: # your youtube channel handle
 discord_id: # your discord id (18-digit unique numerical identifier)
 zotero_username: # your zotero username
 
-social:
-  - icon: fab fa-youtube
-    url: https://youtube.com/c/
 contact_note: >
   Please reach out to me using the email listed above.
 
@@ -231,7 +228,20 @@ exclude:
   - Gemfile.lock
   - vendor
   - blog
+  - posts
+  - node_modules
   - assets/website_illustrations
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - notes.md
+  - secu.md
+  - Dockerfile
+  - docker-compose.yml
+  - docker-local.yml
+  - babel.config.json
+  - package.json
+  - package-lock.json
 keep_files:
   - CNAME
   - .nojekyll
